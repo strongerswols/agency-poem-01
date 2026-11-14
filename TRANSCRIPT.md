@@ -87,3 +87,38 @@ stanzas were cut to fit the 1–1,000 character limit.
 - Encoding: /output/entry.txt reads as valid UTF-8 (938 bytes; the only
   non-ASCII characters are in the 🌍❤️ line).
 - Dependencies: `os` only — standard library, no network, no randomness.
+
+## Second poem swap — user's own agency poem (2026-11-14, evening)
+
+The user sent a new poem of their own about agency and asked to use it
+("Puisinya" — this poem): "I AM THE AUTHOR OF MY OWN CHOICES". Unlike
+the peace/love poem it replaces, this one IS on-theme: it is entirely
+about agency — choosing one's own direction, responding to circumstances
+rather than being carried by them, and the power to choose the next step.
+The previous poem (peace/love, 931 chars) is replaced verbatim.
+
+- Original as written: 1,019 characters including the trailing newline
+  (1,018 without) — title line + 7 paragraphs, ending "That is freedom.
+  That is agency. ✨".
+- Dropped: ONLY the title line ("I AM THE AUTHOR OF MY OWN CHOICES",
+  33 characters + its blank line = 35 characters).
+- NO paragraph was cut, rewritten, or shortened. All 7 paragraphs are
+  kept verbatim, laid out as one paragraph per line with a blank line
+  between paragraphs, exactly as the user wrote them.
+- Final poem: 984 characters including the trailing newline (983 without),
+  986 UTF-8 bytes, 7 non-empty lines (7 paragraphs).
+- main.py, poem.txt, and README.md were updated to the new poem;
+  LICENSE unchanged. The poem constant in main.py transcribes poem.txt
+  exactly (verified by cmp below).
+
+## Verification after the second swap (all run 2026-11-14)
+
+- Import check: `python3 -c "import main"` — OK.
+- Determinism: ran `python3 main.py` twice; `diff` of the two outputs —
+  empty, byte-identical. `cmp` of /output/entry.txt against poem.txt —
+  identical.
+- Character count: 984 characters including the trailing newline (983
+  without) — inside the 1–1,000 limit.
+- Encoding: /output/entry.txt reads as valid UTF-8 (986 bytes; the only
+  non-ASCII character is the ✨ at the end).
+- Dependencies: `os` only — standard library, no network, no randomness.

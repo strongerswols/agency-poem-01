@@ -1,7 +1,8 @@
 """make.fun entry — "Write the best poem about agency" (agency-poem-01).
 
-Writes one poem to /output/entry.txt — the user's own poem, "Love for the
-Universe, Peace for the World", trimmed to fit the 1,000-character limit.
+Writes one poem to /output/entry.txt — the user's own poem about agency,
+"I AM THE AUTHOR OF MY OWN CHOICES", trimmed to fit the 1,000-character
+limit by dropping only its title line.
 
 Deterministic by design: no network, no randomness, no timestamps, no
 environment-dependent behaviour. Every run writes the exact same bytes.
@@ -10,34 +11,19 @@ Python 3.13, standard library only.
 
 import os
 
-POEM = """Beneath the same sky, we find our home,
-Beneath the same sun, we seek shelter,
-Though different in language, color, and belief,
-We remain united through our humanity.
+POEM = """I am not merely a leaf carried by the wind, nor a shadow following someone else's footsteps. I am a human being with thoughts, dreams, and the freedom to choose my own direction.
 
-O world, enough of the tears and sorrow,
-Let children never lose their laughter,
-Let no mother grieve for those she has lost,
-Let war never become humanity's inheritance.
+The world may offer a thousand paths, but I have the right to choose my own. Circumstances may challenge my journey, but they cannot take away my courage. Life is not only about what happens to me, but also about how I choose to respond.
 
-If love is the language of all humanity,
-Let peace become our common destiny,
-From East to West, from North to South,
-Let one voice rise for the future of humankind.
+I understand that every decision has consequences, every action creates change, and every brave step opens new possibilities.
 
-For love belongs to the entire universe,
-And peace is the right of every human being.
-We do not have to be the same to be brothers and sisters,
-We only need to respect, embrace, and care for one another.
+I don't have to wait for the world to change before I begin. I can become the beginning of that change.
 
-And one day, when history tells our story,
-Let the world remember our legacy,
-Not for the wars we conquered,
-But for the love that saved our civilization.
+If I fail, I learn. If I fall, I rise. If I doubt, I reflect. True control over life is not about controlling everything, but understanding that I always have the power to choose my next step.
 
-🌍❤️
+I am not a spectator in my own life. I am the voice, the choice, and the action that shapes my future.
 
-May love unite humanity, and may peace embrace the world.
+That is freedom. That is agency. ✨
 """
 
 DST = "/output/entry.txt"
