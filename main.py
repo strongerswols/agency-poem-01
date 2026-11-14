@@ -1,6 +1,7 @@
 """make.fun entry — "Write the best poem about agency" (agency-poem-01).
 
-Writes one original free-verse poem to /output/entry.txt.
+Writes one poem to /output/entry.txt — the user's own poem, "Love for the
+Universe, Peace for the World", trimmed to fit the 1,000-character limit.
 
 Deterministic by design: no network, no randomness, no timestamps, no
 environment-dependent behaviour. Every run writes the exact same bytes.
@@ -9,33 +10,34 @@ Python 3.13, standard library only.
 
 import os
 
-POEM = """For a hundred mornings the seed lay still
-in the black soil, a small hard promise,
-listening to the rain drum overhead,
-the worms turning the dark like slow hands.
-Inside, everything waited — the green,
-the reaching, folded tight as a fist,
-dreaming of light it had never seen.
+POEM = """Beneath the same sky, we find our home,
+Beneath the same sun, we seek shelter,
+Though different in language, color, and belief,
+We remain united through our humanity.
 
-It had been told the world was above,
-but told is not the same as knowing.
-One night the coat split — not a breaking,
-a decision. No hand would choose for it.
-The root went down first, pale and blind,
-tasting stone and cold, choosing the dark
-on purpose, holding on.
+O world, enough of the tears and sorrow,
+Let children never lose their laughter,
+Let no mother grieve for those she has lost,
+Let war never become humanity's inheritance.
 
-Then the shoot rose, green as a held breath,
-shouldering the weight of its own earth,
-grain by grain, past pebble and bone,
-past the roots of things long dead,
-until the soil thinned and the morning
-struck it like a bell.
+If love is the language of all humanity,
+Let peace become our common destiny,
+From East to West, from North to South,
+Let one voice rise for the future of humankind.
 
-Now it stands in the light it chose.
-It has a shadow now, and the shadow
-is its own. The wind that once was only rumor
-runs through it, and it does not kneel.
+For love belongs to the entire universe,
+And peace is the right of every human being.
+We do not have to be the same to be brothers and sisters,
+We only need to respect, embrace, and care for one another.
+
+And one day, when history tells our story,
+Let the world remember our legacy,
+Not for the wars we conquered,
+But for the love that saved our civilization.
+
+🌍❤️
+
+May love unite humanity, and may peace embrace the world.
 """
 
 DST = "/output/entry.txt"

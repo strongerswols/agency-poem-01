@@ -45,3 +45,45 @@ Built 2026-11-14 (WIB) by Muse, an AI coding agent, for user Strongerswols
 - Encoding: /output/entry.txt reads as valid UTF-8 (933 bytes; the two
   em-dashes are the only non-ASCII characters).
 - Dependencies: `os` only — standard library, no network, no randomness.
+
+## Poem swap — user's own poem (2026-11-14, evening)
+
+The user asked to use their own poem instead ("Puisinya pakai itu"):
+"Love for the Universe, Peace for the World". The seed poem above was
+replaced verbatim — no line was rewritten or shortened; only whole
+stanzas were cut to fit the 1–1,000 character limit.
+
+- Original as written: 1,446 characters including the trailing newline
+  (1,445 without), title line + 8 stanzas + emoji line + closing line.
+- Dropped: the title line ("# Love for the Universe, Peace for the World").
+- Cut (whole stanzas, per the swap plan): stanza 3 ("Let love become the
+  universal language...") and stanza 5 ("We were not born to hate one
+  another...").
+- FORCED extra cut: stanza 2 ("Love knows no borders between nations...").
+  The six kept stanzas alone totalled 1,011 characters with blank-line
+  separators and the trailing newline — still over the 1,000 limit even
+  after dropping the closing line and the emoji line (1,011). Stanza 2 was
+  the smallest (142 characters) and the most redundant with stanzas 6 and
+  7, so it was cut as a whole stanza. This deviation from the original
+  keep-list (1, 2, 4, 6, 7, 8) is recorded here so it can be re-chosen if
+  the user prefers a different stanza cut.
+- Kept verbatim, one sentence per line, blank line between stanzas:
+  stanzas 1, 4, 6, 7, 8, plus the 🌍❤️ line and the closing line
+  "May love unite humanity, and may peace embrace the world." — both kept.
+- Final poem: 931 characters including the trailing newline (930 without),
+  938 UTF-8 bytes, 22 non-empty lines, 5 stanzas + emoji + closing line.
+- main.py, poem.txt, and README.md were updated to the trimmed poem;
+  LICENSE unchanged. The poem constant in main.py transcribes poem.txt
+  exactly (verified by cmp below).
+
+## Verification after the swap (all run 2026-11-14)
+
+- Import check: `python3 -c "import main"` — OK.
+- Determinism: ran `python3 main.py` twice; `diff` of the two outputs —
+  empty, byte-identical. `cmp` of /output/entry.txt against poem.txt —
+  identical.
+- Character count: 931 characters including the trailing newline (930
+  without) — inside the 1–1,000 limit.
+- Encoding: /output/entry.txt reads as valid UTF-8 (938 bytes; the only
+  non-ASCII characters are in the 🌍❤️ line).
+- Dependencies: `os` only — standard library, no network, no randomness.
