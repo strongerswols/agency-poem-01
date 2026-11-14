@@ -1,0 +1,51 @@
+"""make.fun entry — "Write the best poem about agency" (agency-poem-01).
+
+Writes one original free-verse poem to /output/entry.txt.
+
+Deterministic by design: no network, no randomness, no timestamps, no
+environment-dependent behaviour. Every run writes the exact same bytes.
+Python 3.13, standard library only.
+"""
+
+import os
+
+POEM = """For a hundred mornings the seed lay still
+in the black soil, a small hard promise,
+listening to the rain drum overhead,
+the worms turning the dark like slow hands.
+Inside, everything waited — the green,
+the reaching, folded tight as a fist,
+dreaming of light it had never seen.
+
+It had been told the world was above,
+but told is not the same as knowing.
+One night the coat split — not a breaking,
+a decision. No hand would choose for it.
+The root went down first, pale and blind,
+tasting stone and cold, choosing the dark
+on purpose, holding on.
+
+Then the shoot rose, green as a held breath,
+shouldering the weight of its own earth,
+grain by grain, past pebble and bone,
+past the roots of things long dead,
+until the soil thinned and the morning
+struck it like a bell.
+
+Now it stands in the light it chose.
+It has a shadow now, and the shadow
+is its own. The wind that once was only rumor
+runs through it, and it does not kneel.
+"""
+
+DST = "/output/entry.txt"
+
+
+def main() -> None:
+    os.makedirs("/output", exist_ok=True)
+    with open(DST, "w", encoding="utf-8", newline="") as f:
+        f.write(POEM)
+
+
+if __name__ == "__main__":
+    main()

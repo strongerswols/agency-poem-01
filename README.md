@@ -1,0 +1,1 @@
+Entry for the make.fun bounty "Write the best poem about agency" (agency-poem-01, $250). The program writes a single original free-verse poem — a seed cracking open in dark soil and choosing to grow — to /output/entry.txt. It runs on Python 3.13 with the standard library only, needs no network, and writes byte-identical output on every run.
